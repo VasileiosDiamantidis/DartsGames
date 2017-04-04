@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <weather>
+        <location
+        city="London"
+        temperature="12C"
+        weather="Rain"/>
+        <location
+            city="Rome"
+            temperature="25C"
+            weather="Sunny"/>
+        <location
+            city="New York"
+            temperature="15C"
+            weather="Cloudy"/>
+
+    </weather>
+
+
+
+</PreferenceScreen>
