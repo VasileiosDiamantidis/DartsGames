@@ -11,12 +11,22 @@
         android:layout_height="fill_parent">
 
         <fragment
+            android:id="@+id/fragment2"
+            android:name="com.example.vdiamant.dartsgames.ucShowPlayerPoints"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            tools:layout="@layout/uc_show_player_points" />
+
+        <fragment
             android:id="@+id/fragment"
             android:name="com.example.vdiamant.dartsgames.ucAddPoints"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            tools:layout="@layout/uc_add_points"/>
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

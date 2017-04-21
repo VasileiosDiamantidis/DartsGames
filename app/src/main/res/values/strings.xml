@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">DartsGames</string>
     <string name="title_activity_game_701">game_701</string>
+    <string name="Game">Game</string>
 </resources>

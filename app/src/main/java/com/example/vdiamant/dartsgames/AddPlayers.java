@@ -47,9 +47,16 @@ public class AddPlayers extends AppCompatActivity {
         });
 
 
+
+
+
     }
 
     private void startGamePassed() {
+
+
+
+
 
         if(playerList.size()<2){
             Context context = getApplicationContext();
