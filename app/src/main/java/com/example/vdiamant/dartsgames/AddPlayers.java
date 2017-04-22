@@ -12,6 +12,9 @@ import android.widget.TextView;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Toast;
 
+import com.example.vdiamant.dartsgames.Functions.simpleFunctions;
+import com.example.vdiamant.dartsgames.Games.game_701;
+import com.example.vdiamant.dartsgames.Games.killer;
 import com.example.vdiamant.dartsgames.model.Player;
 
 import java.io.Serializable;
@@ -42,7 +45,8 @@ public class AddPlayers extends AppCompatActivity {
         Button start=(Button)findViewById(R.id.button3);
         start.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                startGamePassed();
+                openGame(game,playerList);
+
             }
         });
 
@@ -52,37 +56,12 @@ public class AddPlayers extends AppCompatActivity {
 
     }
 
-    private void startGamePassed() {
-
-
-
-
-
-        if(playerList.size()<2){
-            Context context = getApplicationContext();
-            CharSequence text = "Minimum 2 players!";
-            int duration = Toast.LENGTH_SHORT;
-
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
-        }else {
-
-            if(game.equals("301")||game.equals("501")||game.equals("701")){
-                Intent intent=new Intent(this,game_701.class);
-                intent.putExtra("LIST", (Serializable) playerList);
-                intent.putExtra(EXTRA_MESSAGE,game);
-                startActivity(intent);
-            }else{
-                if(game.equals("killer")){
-                    Intent intent=new Intent(this,killer.class);
-                    intent.putExtra("LIST", (Serializable) playerList);
-                    intent.putExtra(EXTRA_MESSAGE,game);
-                    startActivity(intent);
-                }
-            }
-
-        }
+    private void openGame(String game, List<Player> playerList) {
+        simpleFunctions sf=new simpleFunctions(this);
+        sf.startGamePassed(game,playerList);
     }
+
+
     List<Player> playerList=new ArrayList<Player>();
 
     private  void addP(){

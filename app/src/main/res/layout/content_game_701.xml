@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.vdiamant.dartsgames.game_701"
+    tools:context="com.example.vdiamant.dartsgames.Games.game_701"
     tools:showIn="@layout/game_701">
 
 </android.support.constraint.ConstraintLayout>

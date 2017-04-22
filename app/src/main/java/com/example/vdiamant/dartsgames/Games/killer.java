@@ -1,19 +1,17 @@
-package com.example.vdiamant.dartsgames;
+package com.example.vdiamant.dartsgames.Games;
 
 import android.content.Intent;
-import android.content.res.XmlResourceParser;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
+import com.example.vdiamant.dartsgames.DartsGames;
+import com.example.vdiamant.dartsgames.Fragments.ucAddPoints;
+import com.example.vdiamant.dartsgames.Fragments.ucShowPlayerPoints;
+import com.example.vdiamant.dartsgames.R;
 import com.example.vdiamant.dartsgames.model.Player;
 
-import org.xmlpull.v1.XmlPullParserException;
-
-import java.io.IOException;
 import java.util.List;
 
 public class killer extends AppCompatActivity implements ucAddPoints.ucAddPointsListener,ucShowPlayerPoints.ucShowPlayerListener{
@@ -48,15 +46,24 @@ public class killer extends AppCompatActivity implements ucAddPoints.ucAddPoints
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
     public void addPoints(int points) {
+
         //this is called when the user clicks the ok Button
 
         //An eixame 2o fragment
-        //OnomaDeuterouFragment btmFragment=(OnomaDeuterouFragment)getSupportFragmentManager().findFragmentById(R.id.fragment2); //to fragment2 einai apo thn xml toy killer
-        //btmFragment.methodos();
+        ucShowPlayerPoints showPointsF=(ucShowPlayerPoints)getSupportFragmentManager().findFragmentById(R.id.fragment2); //to fragment2 einai apo thn xml toy killer
+        showPointsF.addPoints(points);
+        showPointsF.initialize();
+        showPointsF.setOterPlayers();
+        showPointsF.setFirstInPointsTop();
+        //initialize();
+        //setOterPlayers();
+        //setFirstInPointsTop();
 
     }
+
 
     @Override
     public void firstInitialization(List<Player> tmpplayers, String tmpgame, int tmpfgamePoints) {

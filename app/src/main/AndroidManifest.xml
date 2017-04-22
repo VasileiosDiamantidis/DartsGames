@@ -18,11 +18,12 @@
         </activity>
         <activity android:name=".AddPlayers" />
         <activity
-            android:name=".game_701"
+            android:name=".Games.game_701"
             android:label="@string/title_activity_game_701"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".XmlParserActivity" />
-        <activity android:name=".killer"></activity>
+        <activity android:name=".Games.killer" />
+        <activity android:name=".Finish"></activity>
     </application>
 
 </manifest>

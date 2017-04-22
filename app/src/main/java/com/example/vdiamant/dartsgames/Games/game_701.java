@@ -1,4 +1,4 @@
-package com.example.vdiamant.dartsgames;
+package com.example.vdiamant.dartsgames.Games;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.vdiamant.dartsgames.DartsGames;
+import com.example.vdiamant.dartsgames.R;
 import com.example.vdiamant.dartsgames.model.Player;
 
 import java.util.List;

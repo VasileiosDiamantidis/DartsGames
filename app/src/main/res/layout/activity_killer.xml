@@ -4,28 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.vdiamant.dartsgames.killer">
+    tools:context="com.example.vdiamant.dartsgames.Games.killer">
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:background="@color/colorPrimaryDark">
 
         <fragment
             android:id="@+id/fragment2"
-            android:name="com.example.vdiamant.dartsgames.ucShowPlayerPoints"
+            android:name="com.example.vdiamant.dartsgames.Fragments.ucShowPlayerPoints"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
+
             tools:layout="@layout/uc_show_player_points" />
 
         <fragment
             android:id="@+id/fragment"
-            android:name="com.example.vdiamant.dartsgames.ucAddPoints"
+            android:name="com.example.vdiamant.dartsgames.Fragments.ucAddPoints"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
+            android:layout_alignEnd="@+id/fragment2"
+            android:layout_alignRight="@+id/fragment2"
             tools:layout="@layout/uc_add_points"/>
     </RelativeLayout>
 
